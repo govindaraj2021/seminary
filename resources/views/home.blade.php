@@ -406,14 +406,14 @@
                             <a href="#" class="news-card">
                                 <div class="card-image">
                                     <picture>
-                                        <source srcset="uploads/home/news/news-01.webp" type="image/webp">
+                                       {{-- <source srcset="uploads/home/news/news-01.webp" type="image/webp">--}}
                                         <source srcset="uploads/home/news/news-01.jpg" type="image/jpeg">
                                         <img src="uploads/home/news/news-01.jpg" alt="Image Caption">
                                     </picture>
                                     <div class="news-date">
                                         <span class="month">AUG</span>
                                         <span class="date">22</span>
-                                    </div>
+                                    </div> 
                                 </div>
                                 <div class="card-content">
                                     <h4>{{$news->title}}</h4>
@@ -426,7 +426,7 @@
                         </div>
                         @endforeach
                     </div>
-                    
+
                 </div>
             </div>
         </div>
