@@ -1,0 +1,9 @@
+.pdf-viewer{
+  height: 1055px;
+  width: 100%;
+  border: 5px solid $colorPrimary;
+  iframe{
+    height: 100%;
+    width: 100%;
+  }
+}

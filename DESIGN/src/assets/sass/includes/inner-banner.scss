@@ -1,0 +1,66 @@
+.inner-banner{
+  display: block;
+  padding-top: 0;
+  position: relative;
+  &:before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 405px;
+    background: linear-gradient(rgba(47, 64, 74, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 9;
+  }
+  .banner-bg{
+    height: 400px;
+    overflow: hidden;
+    @include mobile-lg{
+      height: 400px;
+    }
+    img{
+      width: 100%;
+      min-height: 400px;
+      object-fit: cover;
+      @include mobile-lg{
+        min-height: 400px;
+      }
+    }
+  }
+  .caption-wrapper{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    .container{
+      height: 100%;
+      @include flex-center;
+      .caption{
+        text-align: center;
+        max-width: 668px;
+        h1{
+          font-size: 36px;
+          line-height: 50px;
+          color: $colorWhite;
+          text-shadow: 2px 2px 3px rgba($colorBlack, 0.8);
+          position: relative;
+          z-index: 9;
+          @include tablet-lg{
+            font-size: 30px; 
+            margin-top: 100px;
+          }
+          @include mobile-lg{
+            font-size: 24px; 
+          }
+        }
+      }
+    }
+  }
+  .banner-log{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    margin-left: -75px;
+    bottom: -40px;
+  }
+}

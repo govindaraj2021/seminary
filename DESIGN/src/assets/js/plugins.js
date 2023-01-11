@@ -1,0 +1,14 @@
+//=require plugins/popper.js
+//=require plugins/bootstrap.min.js
+//=require plugins/jquery.marquee.min.js
+//=require plugins/swiper-bundle.js
+//=require plugins/fancybox.umd.js
+//=require plugins/slick.js
+//=require plugins/add-to-any.js
+// plugins/aos.js
+// plugins/select2.min.js
+// plugins/add-to-any.js
+// plugins/counter-up.js
+// plugins/flatpickr.js
+// plugins/jquery.glasscase.min.js
+// plugins/simplebar.min.js

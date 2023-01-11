@@ -1,0 +1,52 @@
+.student-card{
+  border: 1px solid $colorGrey;
+  padding-top: 30px;
+  background-color: $colorWhiteLinen;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  .card-image{
+    width: max-content;
+    margin: auto;
+    padding-bottom: 30px;
+    img{
+      border: 3px solid $colorPrimary;
+    }
+  }
+  .card-content{
+    padding: 30px;
+    background-color: $colorWhite;
+    height: 100%;
+    h4{
+      font-size: 20px;
+      line-height: 1.2;
+      color: $colorPrimary;
+      margin-bottom: 8px;
+    }
+    address{
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    ul{
+      text-align: left;
+      margin-top: 5px;
+      li{
+        & + li{
+          margin-top: 3px;
+        }
+        i{
+          font-size: 18px;
+          line-height: 1;
+          color: $colorPrimary;
+          margin-right: 5px;
+        }
+        a{
+          font-size: 14px;
+          line-height: 1;
+          color: $colorText;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.slick-arrow{
+  width: 40px;
+  height: 40px;
+  border: 1px solid $colorGrey;
+  z-index: 9;
+  &:before{
+    display: none;
+  }
+  i{
+    color: $colorTitle;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  &.slick-prev{
+    left: -40px;
+  }
+  &.slick-next{
+    right: -40px;
+  }
+}

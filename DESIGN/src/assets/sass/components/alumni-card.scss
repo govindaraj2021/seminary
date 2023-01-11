@@ -1,0 +1,19 @@
+.alumni-card{
+  border: 5px solid $colorText;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  img{
+    max-width: 100%;
+  }
+}
+.alumni-photographs{
+  position: sticky;
+  top: 80px;
+  .col-md-12{
+    &:nth-child(even){
+      .alumni-card{
+        border-radius: 0 0 10px 10px;
+      }
+    }
+  }
+}

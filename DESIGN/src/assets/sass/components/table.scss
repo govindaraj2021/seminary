@@ -1,0 +1,29 @@
+.table{
+  tr{
+    th{
+      background-color: $colorPrimary;
+      color: $colorWhite;
+      font-size: 16px;
+      line-height: 1.2;
+      padding: 15px;
+      font-weight: 500;
+      @include tablet-sm{
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  }
+  tr{
+    td{
+      font-size: 16px;
+      line-height: 1.2;
+      padding: 15px;
+      font-weight: 400;
+      @include tablet-sm{
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,46 @@
+.flash-news-section{
+  position: relative;
+  z-index: 9;
+  padding-top: 0;
+  margin-top: -20px;
+  .col-md-12{
+    position: relative;
+    background-color: $colorFoam;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  .flash-news-title{
+    width: 200px;
+    min-width: 200px;
+    height: 40px;
+    background-color: $colorPrimary;
+    padding: 8px;
+    text-align: center;
+    color: $colorWhite;
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+    @include mobile-lg{
+      width: 100px;
+      min-width: 100px;
+      font-size: 14px;
+    }
+  }
+  .flash-news{
+    overflow: hidden;
+    .js-marquee{
+      @include flex-left-center;
+      padding: 0 8px;
+    }
+    a{
+      font-family: $content-font-family;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 1;
+      padding: 12px;
+      @include mobile-lg{
+        font-size: 14px;
+      }
+    }
+  }
+}

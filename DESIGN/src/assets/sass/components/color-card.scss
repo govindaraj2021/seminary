@@ -1,0 +1,64 @@
+.color-card{
+  padding: 50px;
+  background-color: $colorFoam;
+  position: relative;
+  @include tablet-sm{
+    padding: 30px;
+  }
+  &:after{
+    position: absolute;
+    content: "\f10e";
+    font-weight: 900;
+    font-family: 'Font Awesome 6 Pro';
+    font-size: 100px;
+    line-height: 1;
+    top: 10px;
+    right: 50px;
+    color: $colorSolitude;
+    @include tablet-sm{
+      font-size: 60px;
+    }
+  }
+  .card-head{
+    @include flex-left-center;
+    margin-bottom: 30px;
+    @include tablet-lg{
+      margin-bottom: 15px;
+    }
+    .icon-holder{
+      width: 60px;
+      height: 60px;
+      @include flex-center;
+      background-color: $colorWhite;
+      filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+      @include border-50;
+      margin-right: 20px;
+      @include tablet-sm{
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+      i{
+        font-size: 28px;
+        line-height: 1;
+        color: $colorPrimary;
+        @include tablet-sm{
+          font-size: 22px;
+        }
+      }
+    }
+    .card-title{
+      h4{
+        font-weight: normal;
+        font-size: 36px;
+        color: $colorTitle;
+        @include tablet-lg{
+          font-size: 30px; 
+        }
+        @include mobile-lg{
+          font-size: 22px; 
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+/*------------------*
+# Variables
+*------------------*/
+
+/*
+ * This file includes default variables to get going quickly on a project.
+ * File includes:
+ * - Base font family
+ * - Base font sizes
+ * - Heading spacing
+ * - Paragraph spacing
+ * - Base line height
+ * - Base colors
+*/
+
+/*
+ * Base font family
+*/
+
+$content-font-family: 'Roboto', sans-serif;
+$base-font-family: 'Roboto', sans-serif;
+/*
+ * Base font sizes
+*/
+
+$base-font-size: 16px;
+
+
+$font-44: 44px;
+$font-28: 28px;
+$font-24: 24px;
+$font-22: 22px;
+$font-20: 20px;
+$font-18: 18px;
+$font-16: 16px;
+$font-14: 14px;
+$font-13: 14px;
+$font-12: 12px;
+
+/*
+ * Base line height
+*/
+
+$base-line-height: 1.5;
+
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+// Breakpoints
+$desktop-lg: 1440px;
+$desktop-sm: 1365px;
+$tablet-lg: 1200px; 
+$tablet-sm: 990px;
+$mobile-lg: 767px;
+$mobile-sm: 580px;

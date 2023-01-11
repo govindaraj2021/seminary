@@ -1,0 +1,58 @@
+.nav-tabs{
+  justify-content: center;
+  margin-bottom: 30px;
+  border: none;
+  @include tablet-sm{
+    margin-bottom: 15px;  
+  }
+  .nav-item{
+    & +   .nav-item{
+      margin-left: 15px;
+    }
+    .nav-link{
+      text-transform: uppercase;
+      border: 1px solid $colorSkyblue;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 15px 40px;
+      color: $colorPrimary;
+      border-radius: 4px;
+      @include tablet-sm{
+        font-size: 12px;
+        padding: 10px;
+      }
+      &.active{
+        background-color: $colorPrimary;
+        color: $colorWhite;
+      }
+    }
+  }
+}
+.tab-controller{
+  @include flex-center;
+  li{
+    & + li{
+      .btn-nav{
+        margin-left: -1px;
+        // border-left: 0;
+      }
+    }
+    .btn-nav{
+      border: 1px solid $colorTitle;
+      font-weight: 500;
+      padding: 7px 14px;
+      color: $colorTitle;
+      &.active{
+        background-color: $colorTitle;
+        color: $colorWhite;
+      }
+    }
+  }
+}
+.custom-tab-container{
+  .list{
+    &.hide{
+      display: none;
+    }
+  }
+}

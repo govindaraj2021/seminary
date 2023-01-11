@@ -1,0 +1,36 @@
+.page-breadcrumb{
+  background-color: $colorWhite;
+  margin-top: 50px;
+  .breadcrumb{
+    @include flex-left-center;
+    color: $colorBlack;
+    font-size: 13px;
+    line-height: 15px;
+    padding: 13px 0 11px;
+    border-bottom: 1px solid rgba($colorGrey, 0.5);
+    li{
+      position: relative;
+      padding-left: 15px;
+      margin-left: 15px;
+      color: $colorPrimary;
+      &:first-child{
+        padding-left: 0;
+        margin-left: 0;
+        &:before{
+          display: none;
+        }
+      }
+      &:before{
+        position: absolute;
+        content: "/";
+        left: 0;
+        top: 0;
+        color: $colorBlack;
+        // width: 5px;
+      }
+      a{ 
+        color: $colorBlack;
+      }
+    }
+  }
+}

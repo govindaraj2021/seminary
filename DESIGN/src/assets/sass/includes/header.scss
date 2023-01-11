@@ -1,0 +1,413 @@
+header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  @include transition;
+  .col-md-2{
+    width: auto;
+    @include tablet-lg{
+      width: 100%;
+      @include flex-center;
+      justify-content: space-between;
+    }
+  }
+  .col-md-10{
+    width: auto;
+  }
+  .brand{
+    width: 140px;
+    height: 145px;
+    background-color: $colorGrey;
+    border-radius: 0 0 30px 30px;
+    padding: 8px;
+    @include flex-center;
+    position: relative;
+    z-index: 1;
+    @include mobile-lg{
+      width: 120px;
+      height: 125px;
+    }
+    img{
+      max-width: 100%; 
+    }
+  }
+  .top-menu{
+    @include flex-left-center;
+    justify-content: space-between;
+    margin: 15px 0 30px;
+    @include tablet-lg{
+      display: none;
+    }
+    .brand-name{
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 1.2;
+      color: $colorWhite;
+    }
+    .e-contact{
+      @include flex-left-center;
+      li{
+        & + li{
+          margin-left: 25px;
+        }
+        a{
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 24px;
+          color: $colorWhite;
+          @include flex-left-center;
+          i{
+            color: $colorSkyblue;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    @include mobile-lg{
+      display: none;
+    }
+  }
+  .main-menu{
+    @include tablet-lg{
+      position: fixed;
+      width: calc(100% - 100px);
+      height: 100vh;
+      left: 0;
+      top: 0;
+      background-color: $colorWhite;
+      @include flex-left-center;
+      align-items: flex-start;
+      padding: 30px;
+      transform: translateX(-100%);
+      @include transition;
+    }
+    @include mobile-lg{
+      width: calc(100% - 60px);
+    }
+    ul{
+      @include flex-left-center;
+      @include tablet-lg{
+        display: block;
+        width: 100%;
+      }
+      li{
+        display: block;
+        height: 100%;
+        & + li{
+          @include tablet-lg{
+            margin-top: 12px;
+          }
+        }
+        & > a{
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 1;
+          color: $colorWhite;
+          text-transform: uppercase;
+          border: 1px solid transparent;
+          padding: 8px 14px;
+          border-radius: 4px;
+          display: block;
+          // @include desktop-lg{
+          //   padding: 8px 6px;
+          // }
+          @include tablet-lg{
+            display: inline-block;
+            color: $colorText;
+            text-align: center;
+          }
+          &:hover{
+            color: $colorPrimary;
+          }
+
+        }
+        &.active{
+          a{
+            background-color: $colorPrimary;
+            border-color: $colorWhite;
+            &:hover{
+              color: $colorWhite;
+              background-color: $colorTitle;
+            }
+          }
+        }
+        &:hover{
+          button{
+            color: $colorPrimary;
+          }
+        }
+        &.dropdown{
+          position: relative;
+          button{
+            color: $colorWhite;
+            margin-left: 5px;
+            position: absolute;
+            right: -4px;
+            top: 5px;
+            @include tablet-lg{
+              color: $colorText;
+            }
+          }
+          .mega-menu{
+            position: absolute;
+            @include flex-left-center;
+            align-items: baseline;
+            width: 400px;
+            border: 1px solid $colorWhite;
+            padding: 15px;
+            background-color: $colorWhite;
+            @include transition;
+            top: 40px;
+            transform: translateY(10px);
+            @include hide;
+            @include tablet-lg{
+              position: unset;
+              @include show;
+              transform: translateY(0);
+              display: block;
+              padding: 0 0 0 6px;
+              width: auto;
+              display: none;
+              border: none;
+            }
+            &:before{
+              position: absolute;
+              content: "";
+              width: 15px;
+              height: 15px;
+              background-color: $colorWhite;
+              left: 35px;
+              top: -8px;
+              clip-path: polygon(49% 0, 0 50%, 100% 50%);
+              border: 1px solid $colorPrimary;
+            }
+            .mega-sub-menu{
+              width: 184px;
+              @include tablet-lg{
+                width: auto;
+              }
+              h4{
+                padding: 0 14px;
+                color: $colorPrimary;
+                font-size: 18px;
+                line-height: 1;
+                font-weight: 500;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                // @include desktop-lg{
+                //   padding: 8px 6px;
+                // }
+              }
+              ul{
+                display: block;
+                li{
+                  a{
+                    color: $colorTitle;
+                    &:hover{
+                      color: $colorPrimary;
+                    }
+                  }
+                }
+              }
+            }
+            &.single-column{
+              width: 250px;
+              .mega-sub-menu{
+                width: 100%;
+              }
+            }
+          }
+          &:hover{
+            .mega-menu{
+              transform: translateY(0);
+              @include show;
+            }
+          }
+          &.dropdown-active{
+            button{
+              .fa-chevron-down{
+                &:before{
+                  content: "\f077";
+                  font-family: 'Font Awesome 6 Pro';
+                  font-weight: 400;
+                }
+              }
+            }
+            .mega-menu {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .hamburger{
+    @media (min-width: 1200px){
+      display: none;
+    }
+  }
+}
+.header-fixed{
+  header{
+    @include tablet-lg{
+      background-color: transparent;
+      padding-bottom: 0;
+      box-shadow: none;
+    }
+    &:after{
+      box-shadow: 0 4px 14px rgba($colorBlack, 0.10);
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 65px;
+      background-color: $colorWhite;
+      top: 0;
+      left: 0;
+      border-bottom: 1px solid $colorGrey;
+      @include tablet-lg{
+        height: 50px;
+      }
+    }
+    .brand{
+      width: 80px;
+      height: 80px;
+    }
+    .top-menu{
+      display: none;
+    }
+    .main-menu {
+      @include flex-right-center;
+      height: 100%;
+      position: relative;
+      z-index: 9;
+      top: -10px;
+      @include tablet-lg{
+        @include flex-left-center;
+        align-items: flex-start;
+        top: 0;
+        position: fixed;
+      }
+      ul {
+        li {
+          a{
+            color: $colorText;
+            &:hover{
+              color: $colorPrimary;
+            }
+          }
+          &.active{
+            a{
+              color: $colorWhite;
+            }
+          }
+          button{
+            color: $colorText;
+          }
+          &.dropdown{
+            .mega-menu{
+              top: 51px;
+              border: 1px solid $colorPrimary;
+              @include tablet-lg{
+                border: none;
+              }
+              &:before{
+                background-color: $colorPrimary;
+                @include tablet-lg{
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .hamburger{
+      position: relative;
+      z-index: 9999;
+      top: -10px;
+      .hamburger-inner, .hamburger-inner{
+        background-color: $colorBlack;
+        &:before, &:after{
+          background-color: $colorBlack;
+        }
+      }
+      &.is-active{
+        .hamburger-inner, .hamburger-inner{
+          background-color: $colorBlack;
+          &:before, &:after{
+            background-color: $colorBlack;
+          }
+        }
+      }
+    }
+  }
+  &.menu-open{
+    overflow: hidden;
+    header{
+      &:after{
+        background-color: transparent;
+        border-color: transparent;
+      }
+      .hamburger{
+        position: relative;
+        z-index: 9999;
+        .hamburger-inner, .hamburger-inner{
+          background-color: $colorWhite;
+          &:before, &:after{
+            background-color: $colorWhite;
+          }
+        }
+        &.is-active{
+          .hamburger-inner, .hamburger-inner{
+            background-color: $colorWhite;
+            &:before, &:after{
+              background-color: $colorWhite;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.hamburger{
+  position: relative;
+  z-index: 9999;
+  .hamburger-inner, .hamburger-inner{
+    background-color: $colorWhite;
+    &:before, &:after{
+      background-color: $colorWhite;
+    }
+  }
+  &.is-active{
+    .hamburger-inner, .hamburger-inner{
+      background-color: $colorWhite;
+      &:before, &:after{
+        background-color: $colorWhite;
+      }
+    }
+  }
+}
+.menu-open{
+  overflow: hidden;
+  header{
+    .main-menu{
+      transform: translate(0);
+      z-index: 9;
+      .overlay{
+        display: none;
+        @include tablet-lg{
+          position: absolute;
+          content: "";
+          width: 100%;
+          background-color: rgba($colorBlack, 0.5);
+          top: 0;
+          left: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}

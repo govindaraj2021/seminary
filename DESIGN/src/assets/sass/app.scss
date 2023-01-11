@@ -1,0 +1,50 @@
+// Utils
+@import "util/mixins";
+
+
+// Base
+@import "base/variables";
+// @import "base/animations";
+@import "base/color";
+@import "base/typography";
+@import "base/base";
+
+// Pages
+@import "page/home";
+@import "page/about-us";
+@import "page/gallery";
+@import "page/news-details"; 
+@import "page/students";
+@import "page/contact-us";
+
+// Normalise
+@import "vendor/normalise";
+   
+// includes
+@import "includes/header";
+@import "includes/hero-banner";
+@import "includes/inner-banner";
+@import "includes/news-and-events";
+@import "includes/footer";
+
+// Components
+@import "components/button";
+@import "components/title";
+@import "components/breadcrumb";
+@import "components/flash-news";
+@import "components/simple-card";
+@import "components/card";
+@import "components/video-card";
+@import "components/gallery-card";
+@import "components/news-card";
+@import "components/slick-arrow";
+@import "components/side-widget"; 
+@import "components/color-card";
+@import "components/thumbnail-card";
+@import "components/table";
+@import "components/side-menu";
+@import "components/nav-tabs";
+@import "components/student-card";
+@import "components/staff-card";
+@import "components/alumni-card";
+@import "components/pdf-viewer";

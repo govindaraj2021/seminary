@@ -1,0 +1,65 @@
+/*!
+ * Bootstrap v5.0.2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+// scss-docs-start import-stack
+// Configuration
+@import "plugins/bootstrap/functions";
+@import "plugins/bootstrap/variables";
+@import "plugins/bootstrap/mixins";
+@import "plugins/bootstrap/utilities";
+
+// Layout & components
+@import "plugins/bootstrap/root";
+@import "plugins/bootstrap/reboot";
+@import "plugins/bootstrap/type";
+@import "plugins/bootstrap/images";
+@import "plugins/bootstrap/containers";
+@import "plugins/bootstrap/grid";
+@import "plugins/bootstrap/tables";
+@import "plugins/bootstrap/forms";
+// @import "plugins/bootstrap/buttons";
+@import "plugins/bootstrap/transitions";
+@import "plugins/bootstrap/dropdown";
+@import "plugins/bootstrap/button-group";
+@import "plugins/bootstrap/nav";
+@import "plugins/bootstrap/navbar";
+// @import "plugins/bootstrap/card";
+@import "plugins/bootstrap/accordion";
+// @import "plugins/bootstrap/breadcrumb";
+@import "plugins/bootstrap/pagination";
+@import "plugins/bootstrap/badge";
+@import "plugins/bootstrap/alert";
+@import "plugins/bootstrap/progress";
+@import "plugins/bootstrap/list-group";
+@import "plugins/bootstrap/close";
+@import "plugins/bootstrap/toasts";
+@import "plugins/bootstrap/modal";
+@import "plugins/bootstrap/tooltip";
+@import "plugins/bootstrap/popover";
+@import "plugins/bootstrap/carousel";
+@import "plugins/bootstrap/spinners";
+@import "plugins/bootstrap/offcanvas";
+
+// Helpers
+@import "plugins/bootstrap/helpers";
+
+// Utilities
+@import "plugins/bootstrap/utilities/api";
+// scss-docs-end import-stack
+
+
+
+@import "plugins/fontawesome";
+@import "plugins/hamburgers";
+@import "plugins/swiper-bundle";
+@import "plugins/slick";
+@import "plugins/slick-theme";
+@import "plugins/fancybox";
+// @import "plugins/select2.min";
+// @import "plugins/flatpickr";
+// @import "plugins/simplebar";
+// @import "plugins/glasscase.min";

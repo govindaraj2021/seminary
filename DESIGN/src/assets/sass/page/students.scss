@@ -1,0 +1,27 @@
+.student-page{
+  .col-md-9{
+    @include tablet-sm{
+      width: 100%;
+    }
+    .table-wrap{
+      @include mobile-lg{
+        overflow: auto;
+      }
+    }
+  }
+  .col-md-3{
+    @include tablet-sm{
+      display: none;
+    }
+  }
+}
+.student-card-row{
+  .col-md-4{
+    @include tablet-lg{
+      width: 50%;
+    }
+    @include mobile-lg{
+      width: 100%;
+    }
+  }
+}

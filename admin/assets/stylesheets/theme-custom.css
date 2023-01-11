@@ -1,0 +1,15 @@
+/* Add here all your CSS customizations */
+
+.img-container{
+    max-height: 450px;
+}
+.data-slct-al {
+    position: relative;
+    text-align: right;
+    margin-top: -25px;
+    width: 200px;
+    float: right;
+}
+.apply-data-view .form-group{
+    margin-bottom: 10px;
+}

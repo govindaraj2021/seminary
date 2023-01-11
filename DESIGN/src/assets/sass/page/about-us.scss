@@ -1,0 +1,100 @@
+.about-section{
+  &.bg-white{
+    background: $colorWhite;
+  }
+  &.about-us{
+    .col-md-6{
+      @include tablet-sm{
+        width: 100%;
+      }
+      .image-content-wrapper {
+        .about-content{
+          @include tablet-sm{
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+    
+  }
+}
+.history-of-seminary{
+  @include flex-left-center;
+  @include tablet-sm{
+    flex-flow: column;
+  }
+  .img-holder{
+    position: relative;
+    width: 612px;
+    @include tablet-lg{
+      width: 412px;
+    }
+    @include mobile-lg{
+      width: auto;
+    }
+    img{
+      z-index: 1;
+      position: relative;
+      @include tablet-lg{
+        max-width: 100%;
+      }
+    }
+    .round{
+      width: 426px;
+      height: 426px;
+      background: linear-gradient(#fff 0%, #d9eaf6 100%);
+      @include border-50;
+      position: absolute;
+      right: 0;
+      top: 0;
+      @include tablet-lg{
+        width:314px;
+        height: 314px;
+        right: -35px;
+        top: 20px;;
+      }
+      @include mobile-lg{
+        width:280px;
+        height: 280px;
+        right: auto;
+        left: 50%;
+        margin-left: -140px;
+        top: 0;
+      }
+    }
+  }
+  .content-holder{
+    width: calc(100% - 612px);
+    padding-left: 60px;
+    @include tablet-lg{
+      width: calc(100% - 412px);
+    }
+    @include tablet-sm{
+      width: 100%;
+      padding-left: 0;
+      padding-top: 60px;
+    }
+  }
+}
+.mission-vision{
+  margin: 50px 0 0 0;
+  @include mobile-lg{
+    margin: 0;
+  }
+  .col-md-6{
+    padding: 0;
+    & + .col-md-6{
+      .color-card{
+        background-color: $colorWhiteLinen;
+        &:after{
+          color: $colorLinen;
+        }
+      }
+    }
+  }
+}
+.good-shepherd-history{
+  @include mobile-lg{
+    padding-bottom: 0;
+  }
+}

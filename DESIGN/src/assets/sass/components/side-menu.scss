@@ -1,0 +1,25 @@
+.side-menu{
+  position: sticky;
+  top: 65px;
+  ul{
+    border: 1px solid rgba($colorGrey, 0.5);
+    li{
+      & + li{
+        border-top: 1px solid rgba($colorGrey, 0.5);
+      }
+      a{
+        font-size: 16px;
+        line-height: 24px;
+        color: $colorText;
+        padding: 12px;
+        display: block;
+      }
+      &.active{
+        a{
+          background-color: $colorPrimary;
+          color: $colorWhite;
+        }
+      }
+    }
+  }
+}

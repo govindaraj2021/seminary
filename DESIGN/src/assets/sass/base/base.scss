@@ -1,0 +1,68 @@
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+* {
+  outline: 0;
+    &,
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+a, .btn{
+  transition: 0.5s all ease-in-out;
+}
+
+body {
+  background-color: $colorWhite;
+  font-family: $base-font-family;
+}
+
+
+a{
+  color: $colorBlack;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+button{
+  background-color: transparent;
+  &:focus{
+    outline: none;
+  }
+}
+
+ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+figure{
+  margin: 0px;
+}
+
+address{
+  margin: 0;
+  padding: 0;
+}
+section{
+  padding-top: 60px;
+  @include tablet-lg{
+    padding-top: 30px;
+  }
+}
+.card-slider{
+  width: 100%;
+}
+.pb-60{
+  padding-bottom: 60px;
+  @include tablet-lg{
+    padding-bottom: 30px;
+  }
+}
