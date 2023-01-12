@@ -407,12 +407,14 @@
                                 <div class="card-image">
                                     <picture>
                                        {{-- <source srcset="uploads/home/news/news-01.webp" type="image/webp">--}}
-                                        <source srcset="uploads/home/news/news-01.jpg" type="image/jpeg">
-                                        <img src="uploads/home/news/news-01.jpg" alt="Image Caption">
+                                        {{--<source srcset="uploads/home/news/news-01.jpg" type="image/jpeg">--}}
+                                        <img src="{{ asset('storage/app/public/news/' . $news->large_image) }}"
+                                        alt="Image Caption">
+                                        
                                     </picture>
                                     <div class="news-date">
-                                        <span class="month">AUG</span>
-                                        <span class="date">22</span>
+                                        <span class="month">{{ date('M ', strtotime($news->date)) }}</span>
+                                        <span class="date">{{ date('d ', strtotime($news->date)) }}</span>
                                     </div> 
                                 </div>
                                 <div class="card-content">
