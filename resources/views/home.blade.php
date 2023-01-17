@@ -363,7 +363,7 @@
                     <div class="row gallery-card-row">
 
 
-                  {{--@foreach ($gallery as $photo)
+                        {{-- @foreach($gallery as $photo)
                         <div class="col-md-4">
                             <a href="{{ asset('storage/app/public/gallery/' . $photo->large_image) }}" data-fancybox="gallery"
                                 data-caption="First image" class="gallery-card">
@@ -379,7 +379,7 @@
                             </a>
                         </div>
 
-                    @endforeach --}}
+                        @endforeach --}}
 
 
                     </div>
