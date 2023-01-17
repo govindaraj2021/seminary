@@ -39,6 +39,7 @@ Route::name('admin.')->group(function () {
         Route::resource('news', 'NewsController');
         Route::get('news/status/{id}', 'NewsController@status')->name('news.status');
         Route::delete('news/{news?}', 'NewsController@destroy')->name('news.destroy');
+        
 
         Route::resource('gallery', 'GalleryController');
         Route::get('gallery/status/{id}', 'GalleryController@status')->name('gallery.status');

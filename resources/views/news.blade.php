@@ -62,7 +62,7 @@
                                 <h4>{{ $news->title }}</h4>
                                 <p>{!! $news->description !!}</p>
                                 <button type="button" class="btn btn-link">Read More<i
-                                        class="fa-solid fa-chevron-right">::before</i>
+                                        class="fa-solid fa-chevron-right"></i>
                                 </button>
                             </div>
                         </a>

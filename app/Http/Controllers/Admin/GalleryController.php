@@ -70,7 +70,7 @@ class GalleryController extends Controller
                     'title' => 'required',
                     'priority'=>'required',
                     'original_file'=> Rule::requiredIf(function () use ($request) {
-                        return ($request->is_video==0);
+                        return ($request->is_video==1);
                     }),
                     'link'=> Rule::requiredIf(function () use ($request) {
                         return ($request->is_video==1);

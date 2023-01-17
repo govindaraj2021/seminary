@@ -44,17 +44,17 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat auctor nulla quis tempor.</h2>
+        <h2>{{$news->title}}</h2>
         <div class="news-body">
           <div class="date">
             <i class="icon-calendar4-week"></i>
             <span>10-4-2021</span>
           </div>
           <div class="news-img">
-            <img src="{{ asset('/storage/app/public/news/' . $newses->large_image) }}"
+            <img src="{{ asset('/storage/app/public/news/' . $news->large_image) }}"
               alt="Good Shepherd Major Seminary">
           </div>
-          {!!$newses->description!!}
+          {!!$news->description!!}
         </div>
       </div>
       <div class="col-md-5">

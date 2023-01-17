@@ -177,7 +177,7 @@
                                 <a href="{{route('page','#')}}">Publications</a>
                             </li>
                             <li>
-                                <a href="{{route('page','#')}}">News & Events</a>
+                                <a href="{{route('news')}}">News & Events</a>
                             </li>
                             <li>
                                 <a href="{{route('page','#')}}">Gallery</a>
@@ -260,11 +260,15 @@
                                     <i class="fa-solid fa-chevrons-right"></i>News & Events
                                 </a>
                             </li>
+                        
+                     
                             <li>
                                 <a href="{{route('page','#')}}">
                                     <i class="fa-solid fa-chevrons-right"></i>Gallery
                                 </a>
                             </li>
+                     
+
                             <li>
                                 <a href="{{route('contact-us')}}">
                                     <i class="fa-solid fa-chevrons-right"></i>Contact Us

@@ -16,12 +16,12 @@ class NewsController extends Controller{
     }
     public function details($slug){
         $data=[];
-        $newses = News::where('status', 1)->where('slug', $slug)->first();
+        $news = News::where('status', 1)->where('slug', $slug)->first();
         $latest_news = News::Active()->orderBy('id', 'DESC')->whereNotIn('slug', [$slug])->take(3)->get();
         $data['page'] = Page::where('status',1)->where('url',basename(url()->current()))->select('large_image')->orderBy('id', 'desc')->first();
-        $data['newses'] = $newses;
+        $data['news'] = $news;
         $data['latest_news'] = $latest_news;
-        if (empty($newses)) {
+        if (empty($news)) {
             return abort(404);
         }
         return view('news-details',$data);
